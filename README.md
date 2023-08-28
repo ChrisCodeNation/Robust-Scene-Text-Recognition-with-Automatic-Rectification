@@ -1,7 +1,16 @@
 # Robust Scene Text Recognition with Automatic Rectification
-論文概述：定位出街景招牌影像中不規則（irregular）的字體，包含斜視角（perspetive）、彎曲（curved）等形狀，並讓影像更具有可讀性（readable）。
+論文概述：定位出街景招牌影像中不規則（irregular）的字體，包含斜視角（perspetive）、彎曲（curved）等形狀，並讓影像更具有可讀性（readable）。此論文模型為RARE，結合Spatial TransformerNetwork（STN）及Squence Recognition Network（SRN）。由於傳統STN只能旋轉和縮放影像，具有無法校正perspetive和curved影像的限制，所以此論文使用Thin Plate Spine(TPS) transformation改善。
 
 ## 模型架構 
+![](./architecture.png)
+
+此架構分成三個部分：
+* Localization Network
+* Grid generator
+* Sampler
+
+## 程式碼說明
+* STN.py：此程式碼為Localization network的網路架構設計
 
 ## 相關論文連結
 
